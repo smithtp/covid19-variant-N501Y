@@ -45,6 +45,7 @@ src/*.html
 figures/*.png
 figures/*.pdf
 figures/*.svg
+figures/*.tiff
 results/*.rds
 age/*.rds
 age/*.png
