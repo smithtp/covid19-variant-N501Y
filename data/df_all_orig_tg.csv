@@ -1,0 +1,463 @@
+name,epiweek,R(S-),R(S+)
+"Bath and North East Somerset, Swindon and Wiltshire",Week 45,1.612860002,1.014084302
+"Bath and North East Somerset, Swindon and Wiltshire",Week 46,1.173346052,0.682874408
+"Bath and North East Somerset, Swindon and Wiltshire",Week 47,1.301842226,0.713115247
+"Bath and North East Somerset, Swindon and Wiltshire",Week 48,1.687167716,0.871796472
+"Bath and North East Somerset, Swindon and Wiltshire",Week 49,1.995082126,1.018486138
+"Bath and North East Somerset, Swindon and Wiltshire",Week 50,2.170194623,1.168600899
+"Bath and North East Somerset, Swindon and Wiltshire",Week 51,1.931339462,1.139896952
+"Bath and North East Somerset, Swindon and Wiltshire",Week 52,2.283986121,1.337742872
+"Bath and North East Somerset, Swindon and Wiltshire",Week 53,1.021286456,0.598410371
+"Bath and North East Somerset, Swindon and Wiltshire",Week 54,0.83782535,0.488507093
+"Bath and North East Somerset, Swindon and Wiltshire",Week 55,0.75710055,0.4614955
+"Bedfordshire, Luton and Milton Keynes",Week 45,2.047095162,1.06946869
+"Bedfordshire, Luton and Milton Keynes",Week 46,1.660822877,0.832395138
+"Bedfordshire, Luton and Milton Keynes",Week 47,1.723673865,0.864497283
+"Bedfordshire, Luton and Milton Keynes",Week 48,1.999352406,1.011109819
+"Bedfordshire, Luton and Milton Keynes",Week 49,2.530651232,1.272581375
+"Bedfordshire, Luton and Milton Keynes",Week 50,2.017015857,1.097313754
+"Bedfordshire, Luton and Milton Keynes",Week 51,1.19308514,0.744863423
+"Bedfordshire, Luton and Milton Keynes",Week 52,1.494353368,0.951426958
+"Bedfordshire, Luton and Milton Keynes",Week 53,0.871046158,0.588385896
+"Bedfordshire, Luton and Milton Keynes",Week 54,0.784454324,0.522743598
+"Bedfordshire, Luton and Milton Keynes",Week 55,0.819587549,0.544787741
+Birmingham and Solihull,Week 45,1.803681404,1.044067492
+Birmingham and Solihull,Week 46,1.429785424,0.776768564
+Birmingham and Solihull,Week 47,1.407694125,0.718723121
+Birmingham and Solihull,Week 48,1.676322782,0.8215504
+Birmingham and Solihull,Week 49,1.903929216,0.933076255
+Birmingham and Solihull,Week 50,1.985155465,0.986204994
+Birmingham and Solihull,Week 51,2.108572716,1.0440988
+Birmingham and Solihull,Week 52,2.060317838,1.015830316
+Birmingham and Solihull,Week 53,1.236992819,0.667612035
+Birmingham and Solihull,Week 54,0.996976401,0.535216576
+Birmingham and Solihull,Week 55,0.859813756,0.461431306
+"Bristol, North Somerset and South Gloucestershire",Week 45,1.767422998,0.976097427
+"Bristol, North Somerset and South Gloucestershire",Week 46,1.05460277,0.566505653
+"Bristol, North Somerset and South Gloucestershire",Week 47,1.042004773,0.546667766
+"Bristol, North Somerset and South Gloucestershire",Week 48,1.31323396,0.682355903
+"Bristol, North Somerset and South Gloucestershire",Week 49,1.728182434,0.907298955
+"Bristol, North Somerset and South Gloucestershire",Week 50,1.599719666,0.893043957
+"Bristol, North Somerset and South Gloucestershire",Week 51,1.389959372,0.843622571
+"Bristol, North Somerset and South Gloucestershire",Week 52,2.409133606,1.461960914
+"Bristol, North Somerset and South Gloucestershire",Week 53,1.106927063,0.688900318
+"Bristol, North Somerset and South Gloucestershire",Week 54,0.890562873,0.528426603
+"Bristol, North Somerset and South Gloucestershire",Week 55,0.753984395,0.4445293
+"Buckinghamshire, Oxfordshire and Berkshire West",Week 45,1.932373748,0.982524558
+"Buckinghamshire, Oxfordshire and Berkshire West",Week 46,1.477104846,0.685173804
+"Buckinghamshire, Oxfordshire and Berkshire West",Week 47,1.63555569,0.801589743
+"Buckinghamshire, Oxfordshire and Berkshire West",Week 48,1.915982597,1.036932167
+"Buckinghamshire, Oxfordshire and Berkshire West",Week 49,2.407060171,1.297120294
+"Buckinghamshire, Oxfordshire and Berkshire West",Week 50,2.295216184,1.089227207
+"Buckinghamshire, Oxfordshire and Berkshire West",Week 51,1.435467287,0.792313284
+"Buckinghamshire, Oxfordshire and Berkshire West",Week 52,1.650363225,0.939105274
+"Buckinghamshire, Oxfordshire and Berkshire West",Week 53,0.813798504,0.630367106
+"Buckinghamshire, Oxfordshire and Berkshire West",Week 54,0.781510248,0.628343758
+"Buckinghamshire, Oxfordshire and Berkshire West",Week 55,0.749938912,0.622479056
+Cambridgeshire and Peterborough,Week 45,1.645065458,1.092124582
+Cambridgeshire and Peterborough,Week 46,1.720608278,0.826390627
+Cambridgeshire and Peterborough,Week 47,1.999510579,0.801703491
+Cambridgeshire and Peterborough,Week 48,2.352269082,0.857722197
+Cambridgeshire and Peterborough,Week 49,2.549293854,1.007553023
+Cambridgeshire and Peterborough,Week 50,1.801348205,1.028669323
+Cambridgeshire and Peterborough,Week 51,1.317312587,0.952348861
+Cambridgeshire and Peterborough,Week 52,1.829195876,1.020876915
+Cambridgeshire and Peterborough,Week 53,0.873475894,0.739735763
+Cambridgeshire and Peterborough,Week 54,0.789452486,0.665051795
+Cambridgeshire and Peterborough,Week 55,0.863608902,0.658944315
+Cheshire and Merseyside,Week 45,1.582012538,0.96867067
+Cheshire and Merseyside,Week 46,0.916819259,0.504242271
+Cheshire and Merseyside,Week 47,1.33999172,0.683688684
+Cheshire and Merseyside,Week 48,1.732079676,0.789643148
+Cheshire and Merseyside,Week 49,3.082810933,1.249871591
+Cheshire and Merseyside,Week 50,3.495570867,1.337580168
+Cheshire and Merseyside,Week 51,2.046063646,0.885069496
+Cheshire and Merseyside,Week 52,3.901222173,2.281450736
+Cheshire and Merseyside,Week 53,1.259731781,0.866991959
+Cheshire and Merseyside,Week 54,0.854714225,0.487934918
+Cheshire and Merseyside,Week 55,0.772861898,0.433599051
+Cornwall and the Isles of Scilly,Week 45,1.651066957,1.118143318
+Cornwall and the Isles of Scilly,Week 46,1.011455461,0.642568321
+Cornwall and the Isles of Scilly,Week 47,0.869658203,0.55531436
+Cornwall and the Isles of Scilly,Week 48,1.145758979,0.748540215
+Cornwall and the Isles of Scilly,Week 49,1.822160054,1.189940984
+Cornwall and the Isles of Scilly,Week 50,2.4948094,1.63590461
+Cornwall and the Isles of Scilly,Week 51,2.683020648,1.745428312
+Cornwall and the Isles of Scilly,Week 52,2.855435704,1.755421433
+Cornwall and the Isles of Scilly,Week 53,1.146944169,0.636146987
+Cornwall and the Isles of Scilly,Week 54,0.783305989,0.4025597
+Cornwall and the Isles of Scilly,Week 55,0.671701616,0.341395797
+Coventry and Warwickshire,Week 45,1.617922826,1.116177071
+Coventry and Warwickshire,Week 46,1.286775202,0.722200203
+Coventry and Warwickshire,Week 47,1.532258003,0.711038557
+Coventry and Warwickshire,Week 48,2.00746534,0.816566803
+Coventry and Warwickshire,Week 49,2.703243865,1.152391212
+Coventry and Warwickshire,Week 50,2.146849151,1.047868751
+Coventry and Warwickshire,Week 51,1.698820265,0.905730981
+Coventry and Warwickshire,Week 52,2.169759787,1.148520169
+Coventry and Warwickshire,Week 53,1.09094243,0.684446919
+Coventry and Warwickshire,Week 54,0.966985065,0.604179641
+Coventry and Warwickshire,Week 55,0.89208432,0.568330005
+Cumbria and North East,Week 45,2.054118238,1.041395779
+Cumbria and North East,Week 46,1.40982572,0.649255178
+Cumbria and North East,Week 47,1.426264868,0.632527668
+Cumbria and North East,Week 48,1.703405707,0.751530495
+Cumbria and North East,Week 49,2.228769235,1.021141522
+Cumbria and North East,Week 50,1.8900931,0.954266469
+Cumbria and North East,Week 51,1.626019087,0.946092965
+Cumbria and North East,Week 52,2.686323867,1.546324117
+Cumbria and North East,Week 53,0.80067796,0.463109748
+Cumbria and North East,Week 54,0.997070204,0.58087028
+Cumbria and North East,Week 55,0.832866839,0.531631879
+Devon,Week 45,1.322079411,0.967125615
+Devon,Week 46,0.916191067,0.656846712
+Devon,Week 47,0.955580842,0.68047258
+Devon,Week 48,1.237220718,0.85560265
+Devon,Week 49,1.924404931,1.201262491
+Devon,Week 50,2.266909962,1.220561855
+Devon,Week 51,1.854905606,0.909210812
+Devon,Week 52,2.35744817,1.074116617
+Devon,Week 53,1.462835457,0.766610859
+Devon,Week 54,0.944970237,0.535536042
+Devon,Week 55,0.6726147,0.412992864
+Dorset,Week 45,1.358373287,0.875885449
+Dorset,Week 46,1.111457388,0.579680988
+Dorset,Week 47,1.218749441,0.589134035
+Dorset,Week 48,1.52466445,0.744909711
+Dorset,Week 49,2.217739138,1.115102245
+Dorset,Week 50,2.544531416,1.397586813
+Dorset,Week 51,2.429870737,1.196742824
+Dorset,Week 52,2.857893301,1.244630574
+Dorset,Week 53,1.233411483,0.889051034
+Dorset,Week 54,0.832928706,0.645930082
+Dorset,Week 55,0.813649226,0.555379099
+East London Health and Care Partnership,Week 45,2.107466044,1.144433012
+East London Health and Care Partnership,Week 46,1.444802985,0.807322176
+East London Health and Care Partnership,Week 47,1.630220887,0.913845512
+East London Health and Care Partnership,Week 48,1.601739918,0.905618952
+East London Health and Care Partnership,Week 49,2.255020352,1.234035015
+East London Health and Care Partnership,Week 50,2.331192542,1.242720745
+East London Health and Care Partnership,Week 51,0.751414083,0.430380782
+East London Health and Care Partnership,Week 52,1.739133103,1.038391431
+East London Health and Care Partnership,Week 53,0.72873703,0.490546222
+East London Health and Care Partnership,Week 54,0.663454937,0.476042078
+East London Health and Care Partnership,Week 55,0.63549908,0.464753212
+Frimley Health,Week 45,1.980286567,1.024218439
+Frimley Health,Week 46,1.718421925,0.746053894
+Frimley Health,Week 47,1.8518681,0.732548011
+Frimley Health,Week 48,1.777544959,0.821017749
+Frimley Health,Week 49,1.844648608,1.110170168
+Frimley Health,Week 50,1.758592734,1.200961397
+Frimley Health,Week 51,1.526354455,0.931105387
+Frimley Health,Week 52,1.644392893,0.839930386
+Frimley Health,Week 53,0.815594334,0.584815579
+Frimley Health,Week 54,0.723600022,0.551891525
+Frimley Health,Week 55,0.704388038,0.5576414
+Gloucestershire,Week 45,1.29061428,1.072834883
+Gloucestershire,Week 46,1.130399626,0.823334509
+Gloucestershire,Week 47,1.220138582,0.77130842
+Gloucestershire,Week 48,1.67107642,0.932133317
+Gloucestershire,Week 49,2.28065009,1.208556637
+Gloucestershire,Week 50,2.161420952,1.125682477
+Gloucestershire,Week 51,2.073159653,1.077829455
+Gloucestershire,Week 52,2.06290623,1.129326749
+Gloucestershire,Week 53,0.997688227,0.625439974
+Gloucestershire,Week 54,0.865751672,0.513010106
+Gloucestershire,Week 55,0.863413851,0.507604506
+Greater Manchester Health and Social Care Partnership,Week 45,1.317476834,0.775635277
+Greater Manchester Health and Social Care Partnership,Week 46,1.125070932,0.608244366
+Greater Manchester Health and Social Care Partnership,Week 47,1.43091994,0.723269421
+Greater Manchester Health and Social Care Partnership,Week 48,1.689146373,0.800030281
+Greater Manchester Health and Social Care Partnership,Week 49,2.187100448,0.990132331
+Greater Manchester Health and Social Care Partnership,Week 50,2.195692333,0.947132108
+Greater Manchester Health and Social Care Partnership,Week 51,2.117682766,0.929510154
+Greater Manchester Health and Social Care Partnership,Week 52,2.7127439,1.283543838
+Greater Manchester Health and Social Care Partnership,Week 53,1.438057937,0.757326323
+Greater Manchester Health and Social Care Partnership,Week 54,0.936869106,0.529748586
+Greater Manchester Health and Social Care Partnership,Week 55,0.86537475,0.490160679
+Hampshire and the Isle of Wight,Week 45,2.040186802,1.12816123
+Hampshire and the Isle of Wight,Week 46,1.096575747,0.572134946
+Hampshire and the Isle of Wight,Week 47,1.295246793,0.617045406
+Hampshire and the Isle of Wight,Week 48,1.734225621,0.794011343
+Hampshire and the Isle of Wight,Week 49,2.331338378,1.182151299
+Hampshire and the Isle of Wight,Week 50,2.114608032,1.333700586
+Hampshire and the Isle of Wight,Week 51,1.680217008,0.986471344
+Hampshire and the Isle of Wight,Week 52,2.201010695,1.054757334
+Hampshire and the Isle of Wight,Week 53,0.866879261,0.527660032
+Hampshire and the Isle of Wight,Week 54,0.82136402,0.579718574
+Hampshire and the Isle of Wight,Week 55,0.7009597,0.570763714
+Healthier Lancashire and South Cumbria,Week 45,1.467488254,0.834403585
+Healthier Lancashire and South Cumbria,Week 46,1.302824566,0.708271273
+Healthier Lancashire and South Cumbria,Week 47,1.527816352,0.788178323
+Healthier Lancashire and South Cumbria,Week 48,1.752720716,0.841807906
+Healthier Lancashire and South Cumbria,Week 49,2.434643594,1.079887633
+Healthier Lancashire and South Cumbria,Week 50,2.038395287,0.989886778
+Healthier Lancashire and South Cumbria,Week 51,1.621991158,0.916585451
+Healthier Lancashire and South Cumbria,Week 52,2.576021706,1.38421788
+Healthier Lancashire and South Cumbria,Week 53,1.313087498,0.780093634
+Healthier Lancashire and South Cumbria,Week 54,1.006692549,0.577067227
+Healthier Lancashire and South Cumbria,Week 55,0.872523367,0.485473684
+Herefordshire and Worcestershire,Week 45,1.511995106,1.04745165
+Herefordshire and Worcestershire,Week 46,1.040900402,0.658584801
+Herefordshire and Worcestershire,Week 47,0.958697438,0.57856644
+Herefordshire and Worcestershire,Week 48,1.246608081,0.709242456
+Herefordshire and Worcestershire,Week 49,2.327922855,1.188716833
+Herefordshire and Worcestershire,Week 50,2.701594818,1.271222551
+Herefordshire and Worcestershire,Week 51,2.32536451,1.045504732
+Herefordshire and Worcestershire,Week 52,2.719018954,1.256864231
+Herefordshire and Worcestershire,Week 53,1.329717582,0.759731537
+Herefordshire and Worcestershire,Week 54,0.952090952,0.61036162
+Herefordshire and Worcestershire,Week 55,0.735066019,0.510062658
+Hertfordshire and West Essex,Week 45,2.065422144,1.09072933
+Hertfordshire and West Essex,Week 46,1.478123521,0.744295173
+Hertfordshire and West Essex,Week 47,1.749929366,0.816910088
+Hertfordshire and West Essex,Week 48,2.054006431,0.948742407
+Hertfordshire and West Essex,Week 49,2.392158444,1.168300585
+Hertfordshire and West Essex,Week 50,2.238612504,1.20857251
+Hertfordshire and West Essex,Week 51,1.331535003,0.825948273
+Hertfordshire and West Essex,Week 52,1.359088762,0.86430022
+Hertfordshire and West Essex,Week 53,0.725170751,0.520930113
+Hertfordshire and West Essex,Week 54,0.7053058,0.49309097
+Hertfordshire and West Essex,Week 55,0.71187062,0.482084442
+"Humber, Coast and Vale",Week 45,1.347351594,0.916296093
+"Humber, Coast and Vale",Week 46,1.002604562,0.607977118
+"Humber, Coast and Vale",Week 47,1.062774438,0.602067839
+"Humber, Coast and Vale",Week 48,1.38645835,0.744434517
+"Humber, Coast and Vale",Week 49,2.012042865,0.920874384
+"Humber, Coast and Vale",Week 50,2.968066421,1.079818596
+"Humber, Coast and Vale",Week 51,2.134210334,0.896914804
+"Humber, Coast and Vale",Week 52,2.215462665,1.248685172
+"Humber, Coast and Vale",Week 53,0.978461788,0.739481371
+"Humber, Coast and Vale",Week 54,0.745768859,0.596546257
+"Humber, Coast and Vale",Week 55,0.822453358,0.596640195
+Joined Up Care Derbyshire,Week 45,1.545902832,0.879908887
+Joined Up Care Derbyshire,Week 46,1.394813502,0.616644265
+Joined Up Care Derbyshire,Week 47,1.738610983,0.655618775
+Joined Up Care Derbyshire,Week 48,2.171702165,0.85085455
+Joined Up Care Derbyshire,Week 49,2.407281392,1.121187614
+Joined Up Care Derbyshire,Week 50,1.857113385,0.960966176
+Joined Up Care Derbyshire,Week 51,1.528473339,0.856049773
+Joined Up Care Derbyshire,Week 52,2.254614905,1.210337463
+Joined Up Care Derbyshire,Week 53,1.14036521,0.754599717
+Joined Up Care Derbyshire,Week 54,1.034944022,0.718726162
+Joined Up Care Derbyshire,Week 55,0.985096507,0.733217577
+Kent and Medway,Week 45,2.085343825,1.23941996
+Kent and Medway,Week 46,1.088094252,0.619342007
+Kent and Medway,Week 47,1.457404927,0.744064137
+Kent and Medway,Week 48,1.210053114,0.750282236
+Kent and Medway,Week 49,1.600528557,1.15776737
+Kent and Medway,Week 50,1.442953936,1.182739175
+Kent and Medway,Week 51,0.674080982,0.615181241
+Kent and Medway,Week 52,1.528135948,1.045102815
+Kent and Medway,Week 53,0.654246992,0.536555348
+Kent and Medway,Week 54,0.734277361,0.628752203
+Kent and Medway,Week 55,0.710837062,0.637218467
+"Leicester, Leicestershire and Rutland",Week 45,1.6099917,1.083802035
+"Leicester, Leicestershire and Rutland",Week 46,1.166453261,0.669145028
+"Leicester, Leicestershire and Rutland",Week 47,1.252165854,0.690845737
+"Leicester, Leicestershire and Rutland",Week 48,1.502948713,0.839030657
+"Leicester, Leicestershire and Rutland",Week 49,1.813805519,1.047678759
+"Leicester, Leicestershire and Rutland",Week 50,2.007368522,1.032280998
+"Leicester, Leicestershire and Rutland",Week 51,2.252277344,0.892087879
+"Leicester, Leicestershire and Rutland",Week 52,2.530577766,1.035084212
+"Leicester, Leicestershire and Rutland",Week 53,1.109995373,0.707963166
+"Leicester, Leicestershire and Rutland",Week 54,1.042402432,0.678883994
+"Leicester, Leicestershire and Rutland",Week 55,1.024339406,0.647182387
+Lincolnshire,Week 45,1.581560069,1.13136875
+Lincolnshire,Week 46,1.193012524,0.800721918
+Lincolnshire,Week 47,1.4261921,0.888778043
+Lincolnshire,Week 48,1.688696824,0.984023762
+Lincolnshire,Week 49,1.960229412,1.046207035
+Lincolnshire,Week 50,1.842396963,0.914376047
+Lincolnshire,Week 51,1.841174077,0.885186759
+Lincolnshire,Week 52,1.835336441,0.85545472
+Lincolnshire,Week 53,1.226803563,0.629596972
+Lincolnshire,Week 54,1.058441923,0.564477356
+Lincolnshire,Week 55,1.016340809,0.535670266
+Mid and South Essex,Week 45,2.780430528,1.287084234
+Mid and South Essex,Week 46,1.498497496,0.712003949
+Mid and South Essex,Week 47,1.526968191,0.796674596
+Mid and South Essex,Week 48,1.554856565,0.90560115
+Mid and South Essex,Week 49,2.649442807,1.511360457
+Mid and South Essex,Week 50,2.258784437,1.30373504
+Mid and South Essex,Week 51,0.736120664,0.489575544
+Mid and South Essex,Week 52,1.600647789,1.034014811
+Mid and South Essex,Week 53,0.503556824,0.416288782
+Mid and South Essex,Week 54,0.708458815,0.56515721
+Mid and South Essex,Week 55,0.595063154,0.514933287
+Norfolk and Waveney Health and Care Partnership,Week 45,1.929360829,1.086038156
+Norfolk and Waveney Health and Care Partnership,Week 46,1.258267704,0.710524265
+Norfolk and Waveney Health and Care Partnership,Week 47,1.260328439,0.771937614
+Norfolk and Waveney Health and Care Partnership,Week 48,1.324862687,0.952492801
+Norfolk and Waveney Health and Care Partnership,Week 49,1.550167613,1.144899082
+Norfolk and Waveney Health and Care Partnership,Week 50,2.154357919,1.228395043
+Norfolk and Waveney Health and Care Partnership,Week 51,1.736329612,1.019662544
+Norfolk and Waveney Health and Care Partnership,Week 52,2.037652152,1.114430299
+Norfolk and Waveney Health and Care Partnership,Week 53,0.911940313,0.503485904
+Norfolk and Waveney Health and Care Partnership,Week 54,0.988516851,0.461315214
+Norfolk and Waveney Health and Care Partnership,Week 55,0.817339504,0.412302154
+North London Partners in Health and Care,Week 45,2.21928129,1.164803904
+North London Partners in Health and Care,Week 46,1.451034196,0.718189036
+North London Partners in Health and Care,Week 47,1.697623121,0.811488338
+North London Partners in Health and Care,Week 48,2.066940444,0.970832854
+North London Partners in Health and Care,Week 49,2.24417806,1.124135828
+North London Partners in Health and Care,Week 50,2.337950121,1.234840657
+North London Partners in Health and Care,Week 51,1.084004929,0.642471434
+North London Partners in Health and Care,Week 52,1.422547777,0.84416411
+North London Partners in Health and Care,Week 53,0.876150501,0.594050783
+North London Partners in Health and Care,Week 54,0.612389895,0.478245089
+North London Partners in Health and Care,Week 55,0.706837301,0.572077663
+North West London Health and Care Partnership,Week 45,2.177333058,1.125214452
+North West London Health and Care Partnership,Week 46,1.547882624,0.769809486
+North West London Health and Care Partnership,Week 47,1.596847648,0.785194574
+North West London Health and Care Partnership,Week 48,1.752384353,0.88307806
+North West London Health and Care Partnership,Week 49,2.419369907,1.224305703
+North West London Health and Care Partnership,Week 50,2.543356833,1.260454965
+North West London Health and Care Partnership,Week 51,1.338233715,0.722093665
+North West London Health and Care Partnership,Week 52,1.48515881,0.836195872
+North West London Health and Care Partnership,Week 53,1.030386427,0.644020696
+North West London Health and Care Partnership,Week 54,0.733370934,0.513126203
+North West London Health and Care Partnership,Week 55,0.755208497,0.518745564
+Northamptonshire,Week 45,1.597579747,1.044458845
+Northamptonshire,Week 46,1.151963464,0.687717876
+Northamptonshire,Week 47,1.28085817,0.720792966
+Northamptonshire,Week 48,1.751112235,0.941591082
+Northamptonshire,Week 49,2.471676983,1.234159329
+Northamptonshire,Week 50,2.209290567,1.011907296
+Northamptonshire,Week 51,1.929811552,0.913981754
+Northamptonshire,Week 52,2.317316516,1.215759137
+Northamptonshire,Week 53,0.984140253,0.690932409
+Northamptonshire,Week 54,0.77127625,0.608872253
+Northamptonshire,Week 55,0.940507561,0.720440524
+Nottingham and Nottinghamshire Health and Care,Week 45,1.20965842,0.808769848
+Nottingham and Nottinghamshire Health and Care,Week 46,1.283496603,0.752269352
+Nottingham and Nottinghamshire Health and Care,Week 47,1.364810849,0.741541653
+Nottingham and Nottinghamshire Health and Care,Week 48,1.813621029,0.897393679
+Nottingham and Nottinghamshire Health and Care,Week 49,2.741377324,1.197924838
+Nottingham and Nottinghamshire Health and Care,Week 50,2.334212638,0.998087823
+Nottingham and Nottinghamshire Health and Care,Week 51,1.830055845,0.822492281
+Nottingham and Nottinghamshire Health and Care,Week 52,2.245159885,1.172918806
+Nottingham and Nottinghamshire Health and Care,Week 53,1.208892426,0.79483533
+Nottingham and Nottinghamshire Health and Care,Week 54,0.863537112,0.582746122
+Nottingham and Nottinghamshire Health and Care,Week 55,1.028877532,0.597598061
+Our Healthier South East London,Week 45,2.48973357,1.192018522
+Our Healthier South East London,Week 46,1.324996243,0.656670615
+Our Healthier South East London,Week 47,1.551314604,0.783394468
+Our Healthier South East London,Week 48,1.617457606,0.89796618
+Our Healthier South East London,Week 49,2.213397162,1.257058858
+Our Healthier South East London,Week 50,2.320464477,1.288394313
+Our Healthier South East London,Week 51,0.920863617,0.583114535
+Our Healthier South East London,Week 52,1.549301598,0.999822311
+Our Healthier South East London,Week 53,0.822017862,0.603426922
+Our Healthier South East London,Week 54,0.593172485,0.46488018
+Our Healthier South East London,Week 55,0.709844348,0.541470199
+Shropshire and Telford and Wrekin,Week 45,1.27522044,0.941612016
+Shropshire and Telford and Wrekin,Week 46,0.986742256,0.700357449
+Shropshire and Telford and Wrekin,Week 47,0.985365054,0.662507916
+Shropshire and Telford and Wrekin,Week 48,1.197476464,0.723425776
+Shropshire and Telford and Wrekin,Week 49,1.927911857,0.98649742
+Shropshire and Telford and Wrekin,Week 50,2.133360115,0.930854108
+Shropshire and Telford and Wrekin,Week 51,2.576682132,0.99217955
+Shropshire and Telford and Wrekin,Week 52,3.489467816,1.386482536
+Shropshire and Telford and Wrekin,Week 53,1.398911329,0.878206857
+Shropshire and Telford and Wrekin,Week 54,0.900762396,0.674270657
+Shropshire and Telford and Wrekin,Week 55,0.751819582,0.575935529
+Somerset,Week 45,1.658402485,1.12280001
+Somerset,Week 46,1.480358477,0.845556867
+Somerset,Week 47,1.456940292,0.778286666
+Somerset,Week 48,1.646451611,0.830911635
+Somerset,Week 49,1.996696322,0.974987495
+Somerset,Week 50,1.832227372,1.034600372
+Somerset,Week 51,1.755426965,1.108232854
+Somerset,Week 52,1.621263671,1.047373067
+Somerset,Week 53,0.955921101,0.759222386
+Somerset,Week 54,0.894668358,0.722052592
+Somerset,Week 55,0.815584381,0.718841359
+South West London Health and Care Partnership,Week 45,2.347194759,1.115907938
+South West London Health and Care Partnership,Week 46,1.540998842,0.700302937
+South West London Health and Care Partnership,Week 47,1.755380781,0.789602624
+South West London Health and Care Partnership,Week 48,1.818834892,0.938024528
+South West London Health and Care Partnership,Week 49,2.192716737,1.234711093
+South West London Health and Care Partnership,Week 50,2.31021466,1.278642788
+South West London Health and Care Partnership,Week 51,1.100791072,0.749506046
+South West London Health and Care Partnership,Week 52,1.391352073,0.886557079
+South West London Health and Care Partnership,Week 53,0.800319466,0.562990829
+South West London Health and Care Partnership,Week 54,0.711842061,0.526263341
+South West London Health and Care Partnership,Week 55,0.683288633,0.517838878
+South Yorkshire and Bassetlaw,Week 45,1.229542071,0.777034474
+South Yorkshire and Bassetlaw,Week 46,1.156919937,0.686325302
+South Yorkshire and Bassetlaw,Week 47,1.285956711,0.751234596
+South Yorkshire and Bassetlaw,Week 48,1.528127455,0.875211134
+South Yorkshire and Bassetlaw,Week 49,2.033455637,1.075740094
+South Yorkshire and Bassetlaw,Week 50,2.104908306,0.980394145
+South Yorkshire and Bassetlaw,Week 51,2.27640131,0.97816043
+South Yorkshire and Bassetlaw,Week 52,2.724627448,1.171302238
+South Yorkshire and Bassetlaw,Week 53,1.334346007,0.668579697
+South Yorkshire and Bassetlaw,Week 54,1.011623683,0.578737763
+South Yorkshire and Bassetlaw,Week 55,1.129687479,0.705919298
+Staffordshire and Stoke on Trent,Week 45,1.560367932,1.063330317
+Staffordshire and Stoke on Trent,Week 46,1.133184106,0.70652651
+Staffordshire and Stoke on Trent,Week 47,1.263315863,0.735074217
+Staffordshire and Stoke on Trent,Week 48,1.620964718,0.839692974
+Staffordshire and Stoke on Trent,Week 49,2.440381433,1.074514545
+Staffordshire and Stoke on Trent,Week 50,2.125093845,0.902809278
+Staffordshire and Stoke on Trent,Week 51,1.897496415,0.822556927
+Staffordshire and Stoke on Trent,Week 52,2.222106282,1.117154576
+Staffordshire and Stoke on Trent,Week 53,1.140230888,0.767727174
+Staffordshire and Stoke on Trent,Week 54,0.945271286,0.641297217
+Staffordshire and Stoke on Trent,Week 55,0.906659504,0.581311362
+Suffolk and North East Essex,Week 45,1.594690445,0.934777969
+Suffolk and North East Essex,Week 46,1.687281039,0.842944774
+Suffolk and North East Essex,Week 47,1.572148776,0.836985197
+Suffolk and North East Essex,Week 48,1.768874477,0.943171635
+Suffolk and North East Essex,Week 49,2.578536954,1.204263035
+Suffolk and North East Essex,Week 50,2.103122801,1.247107044
+Suffolk and North East Essex,Week 51,1.372533086,0.937963566
+Suffolk and North East Essex,Week 52,2.402698941,0.937205319
+Suffolk and North East Essex,Week 53,0.86181039,0.443631094
+Suffolk and North East Essex,Week 54,0.717166114,0.399637407
+Suffolk and North East Essex,Week 55,0.717921374,0.448484657
+Surrey Heartlands,Week 45,1.890046223,0.938457609
+Surrey Heartlands,Week 46,1.477668372,0.702178557
+Surrey Heartlands,Week 47,1.497080503,0.732592534
+Surrey Heartlands,Week 48,1.641515716,0.905046412
+Surrey Heartlands,Week 49,1.83264054,1.131761845
+Surrey Heartlands,Week 50,1.879877741,1.197032115
+Surrey Heartlands,Week 51,1.471394618,0.98754214
+Surrey Heartlands,Week 52,1.337289314,0.896182541
+Surrey Heartlands,Week 53,0.832216676,0.620633924
+Surrey Heartlands,Week 54,0.704815035,0.526673117
+Surrey Heartlands,Week 55,0.66344682,0.483856104
+Sussex and East Surrey,Week 45,2.623666101,1.18533776
+Sussex and East Surrey,Week 46,1.214624785,0.579115713
+Sussex and East Surrey,Week 47,1.178882002,0.571722086
+Sussex and East Surrey,Week 48,1.650269545,0.807391782
+Sussex and East Surrey,Week 49,2.171237633,1.200588181
+Sussex and East Surrey,Week 50,2.115188997,1.343307692
+Sussex and East Surrey,Week 51,1.243005112,0.863313277
+Sussex and East Surrey,Week 52,1.867680679,1.1497226
+Sussex and East Surrey,Week 53,0.747807536,0.581282348
+Sussex and East Surrey,Week 54,0.819372439,0.646326996
+Sussex and East Surrey,Week 55,0.631603796,0.575969309
+The Black Country and West Birmingham,Week 45,2.113677341,1.153993935
+The Black Country and West Birmingham,Week 46,1.571116456,0.774191084
+The Black Country and West Birmingham,Week 47,1.542990924,0.682468788
+The Black Country and West Birmingham,Week 48,1.851150871,0.764653222
+The Black Country and West Birmingham,Week 49,2.488824007,0.996643032
+The Black Country and West Birmingham,Week 50,2.244302602,0.96588096
+The Black Country and West Birmingham,Week 51,1.651542005,0.832501342
+The Black Country and West Birmingham,Week 52,2.607657183,1.276770575
+The Black Country and West Birmingham,Week 53,1.115293013,0.629136864
+The Black Country and West Birmingham,Week 54,1.00884149,0.601637203
+The Black Country and West Birmingham,Week 55,0.844672703,0.511777867
+West Yorkshire and Harrogate (Health and Care Partnership),Week 45,1.500241938,0.903288874
+West Yorkshire and Harrogate (Health and Care Partnership),Week 46,1.090863444,0.612164522
+West Yorkshire and Harrogate (Health and Care Partnership),Week 47,1.217298729,0.661061846
+West Yorkshire and Harrogate (Health and Care Partnership),Week 48,1.512991585,0.787348735
+West Yorkshire and Harrogate (Health and Care Partnership),Week 49,1.873601372,0.906517493
+West Yorkshire and Harrogate (Health and Care Partnership),Week 50,2.009841835,0.914484301
+West Yorkshire and Harrogate (Health and Care Partnership),Week 51,2.182008261,0.974335121
+West Yorkshire and Harrogate (Health and Care Partnership),Week 52,2.800444623,1.292778415
+West Yorkshire and Harrogate (Health and Care Partnership),Week 53,1.222663676,0.668043553
+West Yorkshire and Harrogate (Health and Care Partnership),Week 54,1.007861744,0.580917758
+West Yorkshire and Harrogate (Health and Care Partnership),Week 55,1.12143661,0.632823898

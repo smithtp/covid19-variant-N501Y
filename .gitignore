@@ -46,7 +46,7 @@ figures/*.png
 figures/*.pdf
 figures/*.svg
 figures/*.tiff
-results/*.rds
+results/*
 age/*.rds
 age/*.png
 age/*.pdf

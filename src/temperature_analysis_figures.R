@@ -3,13 +3,9 @@
 # TS: 2020-02-17
 #
 
-setwd("~/Documents/covid19-variant-N501Y/")
-
 library(tidyverse)
-library(gridExtra)
-library(sf)
 library(lme4)
-
+library(xtable)
 
 ######################
 # Plotting themes:
@@ -83,85 +79,89 @@ lm48 <- lm(Rtnext ~ s.freq + (s.temperature + s.pop)*s.freq, d48)
 lm49 <- lm(Rtnext ~ s.freq + (s.temperature + s.pop)*s.freq, d49)
 lm50 <- lm(Rtnext ~ s.freq + (s.temperature + s.pop)*s.freq, d50)
 
-summary(lm45)
-summary(lm46)
-summary(lm47)
-summary(lm48)
-summary(lm49)
-summary(lm50)
+table_1 <- function(){
+  print("Table 1: VOC, Temperature, Pop density vs R with interactions week 46 regression model with scaled coefficients:")
+  return(xtable(summary(lm46)))
+}
 
-# correct Rt by attack rate
-
-lm45_ar <- lm(Rtnext/(1-attackrate) ~ s.freq + (s.temperature + s.pop)*s.freq, d45)
-lm46_ar <- lm(Rtnext/(1-attackrate) ~ s.freq + (s.temperature + s.pop)*s.freq, d46)
-lm47_ar <- lm(Rtnext/(1-attackrate) ~ s.freq + (s.temperature + s.pop)*s.freq, d47)
-lm48_ar <- lm(Rtnext/(1-attackrate) ~ s.freq + (s.temperature + s.pop)*s.freq, d48)
-lm49_ar <- lm(Rtnext/(1-attackrate) ~ s.freq + (s.temperature + s.pop)*s.freq, d49)
-lm50_ar <- lm(Rtnext/(1-attackrate) ~ s.freq + (s.temperature + s.pop)*s.freq, d50)
-
-summary(lm45_ar)
-summary(lm46_ar)
-summary(lm47_ar)
-summary(lm48_ar)
-summary(lm49_ar)
-summary(lm50_ar)
-
-# calculate differences in coefficients between models for each week
-round(coefficients(lm45_ar) - coefficients(lm45), digits = 3)
-round(coefficients(lm46_ar) - coefficients(lm46), digits = 3)
-round(coefficients(lm47_ar) - coefficients(lm47), digits = 3)
-round(coefficients(lm48_ar) - coefficients(lm48), digits = 3)
-round(coefficients(lm49_ar) - coefficients(lm49), digits = 3)
-round(coefficients(lm50_ar) - coefficients(lm50), digits = 3)
-
-# get r-squared
-round(-(summary(lm45)$r.squared - summary(lm45_ar)$r.squared), digits = 2)
-round(-(summary(lm46)$r.squared - summary(lm46_ar)$r.squared), digits = 2)
-round(-(summary(lm47)$r.squared - summary(lm47_ar)$r.squared), digits = 2)
-round(-(summary(lm48)$r.squared - summary(lm48_ar)$r.squared), digits = 2)
-round(-(summary(lm49)$r.squared - summary(lm49_ar)$r.squared), digits = 2)
-round(-(summary(lm50)$r.squared - summary(lm50_ar)$r.squared), digits = 2)
+table_2 <- function(){
+  print("Table 2: VOC, Temperature, Pop density vs R with interactions week 50 regression model with scaled coefficients:")
+  return(xtable(summary(lm50)))
+}
 
 
-# test effect of tiers
-# (removing lone tier 1 isle of wight)
-summary(lm(Rtnext ~ s.freq + as.factor(tier) + (s.temperature + s.pop)*s.freq, d49[d49$tier %in% c(2,3),]))
-summary(lm(Rtnext ~ s.freq + as.factor(tier) + (s.temperature + s.pop)*s.freq, d50[d50$tier %in% c(2,3),]))
 
-summary(lm(Rt ~ s.freq + as.factor(tier) + (s.temperature + s.pop)*s.freq, combined_data))
+table_S1 <- function(){
+  # correct Rt by attack rate
+  
+  lm45_ar <- lm(Rtnext/(1-attackrate) ~ s.freq + (s.temperature + s.pop)*s.freq, d45)
+  lm46_ar <- lm(Rtnext/(1-attackrate) ~ s.freq + (s.temperature + s.pop)*s.freq, d46)
+  lm47_ar <- lm(Rtnext/(1-attackrate) ~ s.freq + (s.temperature + s.pop)*s.freq, d47)
+  lm48_ar <- lm(Rtnext/(1-attackrate) ~ s.freq + (s.temperature + s.pop)*s.freq, d48)
+  lm49_ar <- lm(Rtnext/(1-attackrate) ~ s.freq + (s.temperature + s.pop)*s.freq, d49)
+  lm50_ar <- lm(Rtnext/(1-attackrate) ~ s.freq + (s.temperature + s.pop)*s.freq, d50)
+  
+  # calculate differences in coefficients between models for each week
+  ar_df <- data.frame(rbind(round(coefficients(lm45_ar) - coefficients(lm45), digits = 3),
+                            round(coefficients(lm46_ar) - coefficients(lm46), digits = 3),
+                            round(coefficients(lm47_ar) - coefficients(lm47), digits = 3),
+                            round(coefficients(lm48_ar) - coefficients(lm48), digits = 3),
+                            round(coefficients(lm49_ar) - coefficients(lm49), digits = 3),
+                            round(coefficients(lm50_ar) - coefficients(lm50), digits = 3)))
+  names(ar_df) <- c("Delta Intercept", "Delta VOC", "Delta Temp", "Delta Pop", "Delta VOCxTemp", "Delta VOCxPop")
 
-t.test(d50[d50$tier == 2,]$Rtnext, d50[d50$tier == 3,]$Rtnext)
+  ar_df$Week <- seq(45, 50, 1)
+
+  # get r-squared
+  ar_df$`Delta r2` <- c(round(-(summary(lm45)$r.squared - summary(lm45_ar)$r.squared), digits = 2),
+                        round(-(summary(lm46)$r.squared - summary(lm46_ar)$r.squared), digits = 2),
+                        round(-(summary(lm47)$r.squared - summary(lm47_ar)$r.squared), digits = 2),
+                        round(-(summary(lm48)$r.squared - summary(lm48_ar)$r.squared), digits = 2),
+                        round(-(summary(lm49)$r.squared - summary(lm49_ar)$r.squared), digits = 2),
+                        round(-(summary(lm50)$r.squared - summary(lm50_ar)$r.squared), digits = 2))
+  print("Table S1: Difference in model coefficients and r-squared when using attack rate-corrected Rt valules:")
+  return(xtable(ar_df))
+}
 
 # test ratios of R of VOC and non-VOC strains
 # I feel like its valid keeping everything together here,
 # because the ratio isn't something that should really vary temporally?
 # i.e. the ratio shouldn't be effected by differences in NPIs between dates, etc.
-transmission_lm <- lm(Ratio ~ as.factor(epiweek) + name + temperature, 
-                      data = transmission_output_joint[transmission_output_joint$epiweek %in% c(45:50),])
-summary(transmission_lm)
-transmission_lm$coefficients["temperature"]
-confint(transmission_lm, "temperature")
-
-transmission_lmer <- lmer(Ratio ~ temperature + as.factor(epiweek) + (1|name), 
-                         data=transmission_output_joint[transmission_output_joint$epiweek %in% c(45:50),])
-lme4::fixef(transmission_lmer)["temperature"]
-confint(transmission_lmer, "temperature")
-
+table_S2 <- function(){
+  
+  transmission_lm <- lm(Ratio ~ as.factor(epiweek) + name + temperature, 
+                        data = transmission_output_joint[transmission_output_joint$epiweek %in% c(45:50),])
+  
+  transmission_lmer <- lmer(Ratio ~ temperature + as.factor(epiweek) + (1|name), 
+                            data=transmission_output_joint[transmission_output_joint$epiweek %in% c(45:50),])
+  
+  model_df <- data.frame(Model = c("Fixed", "Random"),
+                         Temeperature_coef = c(transmission_lm$coefficients["temperature"],
+                                               lme4::fixef(transmission_lmer)["temperature"]),
+                         Temp_lower_CI = c(confint(transmission_lm, "temperature")[1],
+                                           confint(transmission_lmer, "temperature")[1]),
+                         Temp_upper_CI = c(confint(transmission_lm, "temperature")[2],
+                                           confint(transmission_lmer, "temperature")[2]))
+  
+  print("Table S2: Effects of temperature on Ratio of Rt - fixed and random effects models:")
+  return(xtable(model_df))
+}
 
 ####################################
 # Figure Plotting
 
 # make some extra fields for plotting legends
 combined_data$week <- paste("Week", combined_data$epiweek)
-combined_data$lockdown <- as.character(NA)
-combined_data[combined_data$tier == 5,]$lockdown <- "National Lockdown"
-combined_data[combined_data$tier %in% c(1,2,3,4),]$lockdown <- "Tier System"
+
+combined_data <- combined_data %>%
+  group_by(epiweek) %>%
+  mutate(med_VOC = median(novel_frac))
 
 # Big plot of national lockdown R vs Tiered lockdown R across the VOC spreading weeks
 nat_lock <- ggplot(combined_data[combined_data$epiweek %in% c(43, 44, 45, 46, 47, 48, 49, 50),], 
                    aes(x = as.factor(epiweek), y = Rtnext)) + 
-  geom_boxplot(outlier.size = 0, alpha = 0.5) + 
-  geom_point(aes(fill = novel_frac*100), shape = 21, size = 3, position = position_jitterdodge(jitter.width = 0.4), alpha = 0.5) +
+  geom_boxplot(outlier.shape = NA, aes(fill = med_VOC*100)) + 
+  geom_point(aes(fill = novel_frac*100), shape = 21, size = 3, position = position_jitterdodge(jitter.width = 0.4)) +
   scale_fill_gradient(low = "white", high = "red") +
   labs(x = "Week",
        y = expression(R[t]),
@@ -169,8 +169,10 @@ nat_lock <- ggplot(combined_data[combined_data$epiweek %in% c(43, 44, 45, 46, 47
   geom_vline(xintercept = 2.5) +
   geom_vline(xintercept = 6.5) +
   second_theme +
-  theme(legend.position = c(0.32, 0.78))
-nat_lock
+  theme(legend.position = c(0.32, 0.78)) +
+  theme(axis.text.x = element_blank(),
+        axis.title.x = element_blank())
+
 
 # density plots of VOC distribution across those weeks
 VOC_dist_full <- ggplot(combined_data[combined_data$epiweek %in% c(43, 44, 45, 46, 47, 48, 49, 50),],
@@ -181,25 +183,7 @@ VOC_dist_full <- ggplot(combined_data[combined_data$epiweek %in% c(43, 44, 45, 4
   theme(axis.text.y = element_blank(),
         axis.title.x = element_blank(),
         axis.text.x = element_text(size = 10, angle = 45))
-VOC_dist_full
 
-# effect of tiers in week 50
-tier_plot <- ggplot(combined_data[combined_data$epiweek == 50 &
-                                          combined_data$tier %in% c(2,3),], 
-                          aes(x = as.factor(tier), y = Rtnext, fill = as.factor(tier))) + 
-  geom_boxplot(outlier.size = 0, alpha = 0.5) +
-  scale_fill_manual(values=c("grey20", "grey10", "grey0")) +
-  geom_point(shape = 21, size = 3, position = position_jitterdodge(jitter.width = 0.8), alpha = 0.7) +
-  labs(x = "Lockdown Tier",
-       y = expression(R[t])) +
-  second_theme +
-  theme(legend.position = "none")
-tier_plot
-
-
-ggsave("figures/national_lockdown.svg", nat_lock, height = 5, width = 16)
-ggsave("figures/VOC_dist_full.svg", VOC_dist_full, height = 2, width = 15)
-ggsave("figures/Rt_tiers.svg", tier_plot, width = 4, height = 4)
 
 # heatmap plots of model results in early and late VOC spread
 unscaled_week46 <- lm(Rtnext ~ novel_frac + (temperature + log.pop)*novel_frac, d46)
@@ -219,7 +203,7 @@ heatmap_plot_46 <- ggplot(predicted_Rt_46, aes(x = Temperature, y = Frequency)) 
   geom_tile(aes(fill = Rt)) +
   geom_point(data = d46, aes(x = temperature, y = novel_frac, fill = Rtnext), size = 4, shape = 21) +
   #scale_fill_viridis_c(limits = c(0.5, 3)) +
-  scale_fill_gradient(low = "blue", high = "yellow") +
+  scale_fill_gradient(low = "blue", high = "yellow", limits = c(0.55, 2.8)) +
   scale_x_continuous(expand = c(0, 0)) +
   scale_y_continuous(expand = c(0, 0)) +
   labs(x = "Temperature (°C)",
@@ -227,8 +211,23 @@ heatmap_plot_46 <- ggplot(predicted_Rt_46, aes(x = Temperature, y = Frequency)) 
        title = "Week 46, Beginning 2020-11-09",
        fill = expression(R[t])) +
   main_theme +
-  theme(aspect.ratio = 1)
-heatmap_plot_46
+  theme(aspect.ratio = 1,
+        legend.position = "none")
+
+# # with VOC frequency as the colour?
+# ggplot(predicted_Rt_46, aes(x = Temperature, y = Rt)) + 
+#   #geom_tile(aes(fill = Frequency)) +
+#   geom_point(data = d46, aes(x = temperature, y = Rtnext, fill = novel_frac), size = 4, shape = 21) +
+#   #scale_fill_viridis_c(limits = c(0.5, 3)) +
+#   scale_fill_gradient(low = "blue", high = "yellow") +
+#   #scale_x_continuous(expand = c(0, 0)) +
+#   #scale_y_continuous(expand = c(0, 0)) +
+#   labs(x = "Temperature (°C)",
+#        y = expression(R[t]),
+#        title = "Week 46, Beginning 2020-11-09",
+#        fill = "VOC Frequency") +
+#   main_theme +
+#   theme(aspect.ratio = 1)
 
 
 unscaled_week50 <- lm(Rtnext ~ novel_frac + (temperature + log.pop)*novel_frac, d50)
@@ -249,7 +248,7 @@ heatmap_plot_50 <- ggplot(predicted_Rt_50, aes(x = Temperature, y = Frequency)) 
   geom_tile(aes(fill = Rt)) +
   geom_point(data = d50, aes(x = temperature, y = novel_frac, fill = Rtnext), size = 4, shape = 21) +
   #scale_fill_viridis_c(limits = c(0.5, 3)) +
-  scale_fill_gradient(low = "blue", high = "yellow") +
+  scale_fill_gradient(low = "blue", high = "yellow", limits = c(0.55, 2.8)) +
   scale_x_continuous(expand = c(0, 0)) +
   scale_y_continuous(expand = c(0, 0)) +
   labs(x = "Temperature (°C)",
@@ -257,25 +256,75 @@ heatmap_plot_50 <- ggplot(predicted_Rt_50, aes(x = Temperature, y = Frequency)) 
        title = "Week 50, Beginning 2020-12-07",
        fill = expression(R[t])) +
   main_theme +
-  theme(aspect.ratio = 1)
-heatmap_plot_50
+  theme(aspect.ratio = 1,
+        legend.position = "none")
 
-# tiff because it seems to preserve colour contrast better than svg
-ggsave("figures/week_46_independent_scale.tiff", heatmap_plot_46, height = 5, width = 5)
-ggsave("figures/week_50_independent_scale.tiff", heatmap_plot_50, height = 5, width = 5)
 
+# # with VOC frequency as the colour?
+# ggplot(predicted_Rt_50, aes(x = Temperature, y = Rt)) + 
+#   #geom_tile(aes(fill = Frequency)) +
+#   geom_point(data = d50, aes(x = temperature, y = Rtnext, fill = novel_frac), size = 4, shape = 21) +
+#   #scale_fill_viridis_c(limits = c(0.5, 3)) +
+#   scale_fill_gradient(low = "blue", high = "yellow") +
+#   #scale_x_continuous(expand = c(0, 0)) +
+#   #scale_y_continuous(expand = c(0, 0)) +
+#   labs(x = "Temperature (°C)",
+#        y = expression(R[t]),
+#        title = "Week 50, Beginning 2020-12-07",
+#        fill = "VOC Frequency") +
+#   main_theme +
+#   theme(aspect.ratio = 1)
 
 
 #################################
 # Supplementary plots
 
-ratios_plot <- ggplot(transmission_output_joint[transmission_output_joint$epiweek %in% c(45:50),],
-       aes(x = temperature, y = Ratio)) + geom_point(aes(col = as.factor(epiweek))) +
-  geom_smooth(method = lm) +
-  labs(x = "Temperature (°C)",
-       y = expression(paste("Ratio VOC to non-VOC ", R[t])),
-       col = "Week") +
-  second_theme
-ratios_plot
+attackrates_plot <- ggplot(combined_data[combined_data$epiweek %in% c(45, 46, 47, 48, 49, 50),]) + 
+  geom_density(aes(x=attackrate*100, colour=week),show.legend=FALSE, size = 2) +
+  stat_density(aes(x=attackrate*100, colour=week),
+               geom="line",position="identity", size = 0) + 
+  guides(colour = guide_legend(override.aes=list(size=1))) +
+  scale_colour_manual(values = c("black", "grey45", "darkslateblue", "cyan4", "orange2", "coral3")) +
+  geom_vline(xintercept = median(d45$attackrate*100), col = "black", linetype = "dashed", lwd = 1) +
+  geom_vline(xintercept = median(d50$attackrate*100), col = "coral3", linetype = "dashed", lwd = 1) +
+  labs(x = "Attack Rate (%)",
+       y = "Density") +
+  second_theme +
+  theme(legend.position = c(0.8, 0.6),
+        legend.title = element_blank())
 
-ggsave("figures/ratios_plot.svg", ratios_plot, height = 5, width = 7)
+
+#######################
+####      MAIN     ####
+#######################
+
+
+# Run analyses and generate latex tables
+print("Week 46 analysis:")
+table_1()
+print("")
+print("=============================================================")
+print("")
+print("Week 50 analysis:")
+table_2()
+print("")
+print("=============================================================")
+print("Attack Rates sensitivity analysis (supplementary):")
+table_S1()
+print("")
+print("=============================================================")
+print("Effects of temperature on ratio of VOC to non-VOC Rt (supplementary):")
+table_S2()
+print("")
+print("=============================================================")
+
+
+
+ggsave("figures/national_lockdown.svg", nat_lock, height = 5, width = 16)
+ggsave("figures/VOC_dist_full.svg", VOC_dist_full, height = 2, width = 15)
+
+# tiff because it seems to preserve colour contrast better than svg
+ggsave("figures/week_46_same_scale.tiff", heatmap_plot_46, height = 5, width = 5)
+ggsave("figures/week_50_same_scale.tiff", heatmap_plot_50, height = 5, width = 5)
+
+ggsave("figures/attackrates_plot.svg", attackrates_plot, height = 5, width = 7)
