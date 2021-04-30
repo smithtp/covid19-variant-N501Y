@@ -67,6 +67,59 @@ uk_popdensity$area <- rownames(uk_popdensity)
 
 combined_data <- left_join(combined_data, uk_popdensity, by = "area")
 
+################################
+# ---  Add Lockdown Tiers  --- #
+################################
+
+
+# add the UK tiers
+uk_tiers_data <- read.csv("data/NPI_created_dataset_20_01_2021.csv")
+
+# shorten to just the columns we want
+uk_tiers_data <- uk_tiers_data[,c("date", "ltla", "tier_1", "tier_2", "tier_3", "tier_4", "national_lockdown")]
+
+# turn tiers into single column
+uk_tiers <- uk_tiers_data %>%
+  group_by(ltla = ltla, date = date) %>%
+  gather(tier, val, -date, -ltla) %>%
+  filter(val == 1) %>%
+  dplyr::select(-val) %>%
+  dplyr::arrange(ltla, date)
+
+# merge this back into the original tier data to get NAs where there was no tier
+uk_tiers_data <- left_join(uk_tiers_data, uk_tiers, by = c("date", "ltla"))
+
+# and change to numeric tiers for later regressions
+uk_tiers_data[is.na(uk_tiers_data$tier),]$tier <- 0
+uk_tiers_data[uk_tiers_data$tier == "tier_1",]$tier <- 1
+uk_tiers_data[uk_tiers_data$tier == "tier_2",]$tier <- 2
+uk_tiers_data[uk_tiers_data$tier == "tier_3",]$tier <- 3
+uk_tiers_data[uk_tiers_data$tier == "tier_4",]$tier <- 4
+uk_tiers_data[uk_tiers_data$tier == "national_lockdown",]$tier <- 5
+uk_tiers_data$tier <- as.numeric(uk_tiers_data$tier)
+
+uk_tiers_data$epiweek <- format(as.Date(uk_tiers_data$date, format='%d/%m/%Y'), "%V")
+uk_tiers_data$epiyear <- format(as.Date(uk_tiers_data$date, format='%d/%m/%Y'), "%Y")
+
+
+# group by week
+# need a mode function
+mode <- function(codes){
+  as.numeric(which.max(tabulate(codes)))
+}
+
+weekly_tiers <- uk_tiers_data[,c("ltla", "tier", "epiweek", "epiyear")] %>%
+  group_by(area = ltla, epiweek = epiweek, epiyear = epiyear) %>%
+  dplyr::summarize(tier = mode(tier))
+
+# drop to just 2020 for now
+weekly_tiers <- weekly_tiers[weekly_tiers$epiyear == "2020",]
+weekly_tiers$epiweek <- as.numeric(weekly_tiers$epiweek)
+weekly_tiers$area <- as.character(weekly_tiers$area)
+
+# merge into Rt data
+combined_data <- left_join(combined_data, weekly_tiers[,c("area", "epiweek", "tier")], by = c("area", "epiweek"))
+
 
 ### --- DONE!
 

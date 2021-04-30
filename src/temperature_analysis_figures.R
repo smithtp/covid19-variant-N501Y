@@ -89,9 +89,15 @@ table_2 <- function(){
   return(xtable(summary(lm50)))
 }
 
-
-
 table_S1 <- function(){
+  week49 <- summary(lm(Rtnext ~ s.freq + as.factor(tier) + (s.temperature + s.pop)*s.freq, d49[d49$tier %in% c(2,3),]))
+  week50 <- summary(lm(Rtnext ~ s.freq + as.factor(tier) + (s.temperature + s.pop)*s.freq, d50[d50$tier %in% c(2,3),]))
+  print("Table S1: VOC, Tier, Temperature, Pop density vs R with interactions week 49 and 50 regression models:")
+  return(list(week49, week50))
+}
+
+
+table_S2 <- function(){
   # correct Rt by attack rate
   
   lm45_ar <- lm(Rtnext/(1-attackrate) ~ s.freq + (s.temperature + s.pop)*s.freq, d45)
@@ -119,7 +125,7 @@ table_S1 <- function(){
                         round(-(summary(lm48)$r.squared - summary(lm48_ar)$r.squared), digits = 2),
                         round(-(summary(lm49)$r.squared - summary(lm49_ar)$r.squared), digits = 2),
                         round(-(summary(lm50)$r.squared - summary(lm50_ar)$r.squared), digits = 2))
-  print("Table S1: Difference in model coefficients and r-squared when using attack rate-corrected Rt valules:")
+  print("Table S2: Difference in model coefficients and r-squared when using attack rate-corrected Rt valules:")
   return(xtable(ar_df))
 }
 
@@ -127,7 +133,7 @@ table_S1 <- function(){
 # I feel like its valid keeping everything together here,
 # because the ratio isn't something that should really vary temporally?
 # i.e. the ratio shouldn't be effected by differences in NPIs between dates, etc.
-table_S2 <- function(){
+table_S3 <- function(){
   
   transmission_lm <- lm(Ratio ~ as.factor(epiweek) + name + temperature, 
                         data = transmission_output_joint[transmission_output_joint$epiweek %in% c(45:50),])
@@ -143,7 +149,7 @@ table_S2 <- function(){
                          Temp_upper_CI = c(confint(transmission_lm, "temperature")[2],
                                            confint(transmission_lmer, "temperature")[2]))
   
-  print("Table S2: Effects of temperature on Ratio of Rt - fixed and random effects models:")
+  print("Table S3: Effects of temperature on Ratio of Rt - fixed and random effects models:")
   return(xtable(model_df))
 }
 
@@ -304,20 +310,22 @@ print("Week 46 analysis:")
 table_1()
 print("")
 print("=============================================================")
-print("")
 print("Week 50 analysis:")
 table_2()
 print("")
 print("=============================================================")
-print("Attack Rates sensitivity analysis (supplementary):")
+print("Effect of lockdown tiers (supplementary):")
 table_S1()
 print("")
 print("=============================================================")
-print("Effects of temperature on ratio of VOC to non-VOC Rt (supplementary):")
+print("Attack Rates sensitivity analysis (supplementary):")
 table_S2()
 print("")
 print("=============================================================")
-
+print("Effects of temperature on ratio of VOC to non-VOC Rt (supplementary):")
+table_S3()
+print("")
+print("=============================================================")
 
 
 ggsave("figures/national_lockdown.svg", nat_lock, height = 5, width = 16)
@@ -327,4 +335,4 @@ ggsave("figures/VOC_dist_full.svg", VOC_dist_full, height = 2, width = 15)
 ggsave("figures/week_46_same_scale.tiff", heatmap_plot_46, height = 5, width = 5)
 ggsave("figures/week_50_same_scale.tiff", heatmap_plot_50, height = 5, width = 5)
 
-ggsave("figures/attackrates_plot.svg", attackrates_plot, height = 5, width = 7)
+ggsave("figures/attackrates_plot.tiff", attackrates_plot, height = 5, width = 7, dpi=300, compression = "lzw")
